@@ -29,7 +29,7 @@ public class BaseMethods extends DriverFactory {
         WebElement element = presenceElement(key);   // Öğeyi bulur.
         return element;
     }
-
+    //d
     public void click(By key){
         getDriver().findElement(key).click();  // Öğeye tıklar.
     }
