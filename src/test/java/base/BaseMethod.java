@@ -1,13 +1,14 @@
-package util;
+package base;
 
 import io.appium.java_client.MobileBy;                  // Appium ile mobil uygulama öğelerine erişmek için kullanılan kütüphane.
-import io.appium.java_client.MobileElement;             // Appium ile mobil öğeleri temsil eden kütüphane.
 import org.openqa.selenium.By;                          // Web öğelerine erişmek için kullanılan kütüphane.
 import org.openqa.selenium.WebElement;                  // Web öğelerini temsil eden kütüphane.
 import org.openqa.selenium.support.ui.ExpectedConditions;  // Belirli koşullar gerçekleşene kadar beklemek için kullanılan kütüphane.
 import org.openqa.selenium.support.ui.WebDriverWait;     // Belirli bir koşul gerçekleşene kadar beklemek için kullanılan kütüphane.
 import org.apache.log4j.LogManager;                     // Loglama için kullanılan kütüphane.
 import org.apache.log4j.Logger;                         // Loglama için kullanılan kütüphane.
+import utilities.DriverFactory;
+
 import java.util.concurrent.TimeUnit;                    // Zaman birimlerini kullanarak beklemeleri ayarlamak için gereklidir.
 
 public class BaseMethod extends DriverFactory {

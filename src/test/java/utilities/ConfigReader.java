@@ -1,4 +1,4 @@
-package util;
+package utilities;
 
 import java.io.FileInputStream;     // Dosya okuma işlemleri için gerekli kütüphane.
 import java.io.FileNotFoundException;  // Dosyanın bulunamaması durumunda fırlatılacak istisnayı temsil eden kütüphane.

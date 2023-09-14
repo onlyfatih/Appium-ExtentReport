@@ -1,14 +1,8 @@
 package stepDefinitions;
 
-import com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 import pages.AnkarakartPage;
-import pages.AnnouncementsPage;
-import pages.HomePage;
-import util.DriverFactory;
+import utilities.DriverFactory;
 public class AnkarakartPageStepDefinitions {
 
     AnkarakartPage ankarakartPage = new AnkarakartPage(DriverFactory.getDriver());

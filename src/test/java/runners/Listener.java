@@ -1,11 +1,10 @@
-package testRunners;
+package runners;
 
 import com.aventstack.extentreports.ExtentReports;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import util.BaseMethod;
-import util.Hooks;
+import hooks.Hooks;
 
 import javax.mail.MessagingException;
 

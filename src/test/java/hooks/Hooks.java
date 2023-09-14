@@ -1,17 +1,13 @@
-package util;
+package hooks;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.beust.ah.A;
 import io.appium.java_client.AppiumDriver;       // Appium ile sürücü işlevselliğini kullanabilmek için gerekli kütüphane.
 import io.cucumber.java.After;                   // Cucumber senaryo sonrası işlemleri yapabilmek için kullanılan kütüphane.
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;                  // Cucumber senaryo öncesi işlemleri yapabilmek için kullanılan kütüphane.
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.Reporter;                      // TestNG test raporlama işlemleri için kullanılan kütüphane.
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
+import base.BaseMethod;
+import utilities.ConfigReader;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
@@ -20,13 +16,11 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import java.util.Date;
 import java.util.Properties;                    // Ayarları saklamak ve yönetmek için kullanılan kütüphane.
 
 import static javax.mail.Transport.send;
-import static util.DriverFactory.initialize_Driver;  // Sürücüyü başlatan metodu çağırmak için kullanılan import.
 
-public class Hooks extends  BaseMethod {
+public class Hooks extends BaseMethod {
     AppiumDriver driver;                // AppiumDriver tipinde sürücü değişkeni.
     Properties properties;              // Ayarları saklamak için özellikler değişkeni.
     private static int scenarioCount = 0; // Senaryo sayısını takip etmek için bir sayaç

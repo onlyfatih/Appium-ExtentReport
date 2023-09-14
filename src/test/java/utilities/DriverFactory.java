@@ -1,4 +1,4 @@
-package util;
+package utilities;
 
 import io.appium.java_client.AppiumDriver;       // Appium ile sürücü işlevselliğini kullanabilmek için gerekli kütüphane.
 import org.openqa.selenium.remote.DesiredCapabilities;   // Appium sürücü yapılandırmaları için kullanılır.
