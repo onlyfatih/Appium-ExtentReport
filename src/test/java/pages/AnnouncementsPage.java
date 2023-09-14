@@ -5,8 +5,8 @@ import io.appium.java_client.MobileBy;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import base.BaseMethod;
-public class AnnouncementsPage extends BaseMethod {
+import base.BaseMethods;
+public class AnnouncementsPage extends BaseMethods {
 
     private static final Logger LOG = LogManager.getLogger(AnnouncementsPage.class);
 
