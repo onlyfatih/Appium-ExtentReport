@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/java/features"}, // Test senaryolarının (feature dosyalarının) yolunu belirtir.
         glue = {"stepDefinitions", "util"},    // Senaryoların adım tanımlama kodlarının bulunduğu paketleri belirtir.
-        tags = "",                             // Hangi senaryoların çalıştırılacağını etiketle belirler.
+        tags = "@SearchBusStop",                             // Hangi senaryoların çalıştırılacağını etiketle belirler.
         plugin = {
                 "summary",                      // Özet raporunu konsola basar.
                 "pretty",                       // Test sonuçlarını daha okunabilir bir biçimde konsola basar.
