@@ -6,9 +6,9 @@ import io.appium.java_client.MobileBy;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import base.BaseMethod;
+import base.BaseMethods;
 
-public class HomePage extends BaseMethod {
+public class HomePage extends BaseMethods {
 
     private static final Logger LOG = LogManager.getLogger(HomePage.class);
 
