@@ -25,7 +25,7 @@
     - `promotion.id`, `promotion.shortName`, ve `promotion.showAwardItems` alanlarının beklenen değerlere sahip olduğu kontrol edildi.
 
 #### Örnek Curl:
-```bash
+''
 curl --location 'http://discovery-search-grocery-search-service.stage.tgointernals.com/search?searchQuery=tum--urunler%3Fq%3Ds%C3%BCt&searchQueryTypes=PRODUCT&storeIds=284' \
 --header 'x-agentname: agent' \
 --header 'x-correlationId: 123456' \
