@@ -30,7 +30,8 @@ curl --location 'http://discovery-search-grocery-search-service.stage.tgointerna
 --header 'x-agentname: agent' \
 --header 'x-correlationId: 123456' \
 --header 'branch-name: cse-2947' \
---data '''
+--data
+``
 
 ### **3. API Fonksiyonel Testleri**
 
