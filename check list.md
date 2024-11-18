@@ -1,33 +1,54 @@
 ## **Test Kontrol Listesi**
 
 ### **1. Genel Hazırlık**
-- [ ] Ortam:
-  - Doğru ortam seçildi.
-  - Uç noktalara erişim sağlandı.
-  - Gerekli konfigürasyonlar kontrol edildi.
-- [ ] Veri Doğrulama:
-  - Dosya isimlendirme kuralları uygun.
-  - Veriler eksiksiz ve doğru.
+- [ ] **Branch Kontrolü**
+  - Branch adı doğru mu?
+- [ ] **Ortam Kontrolü**
+  - Testler doğru ortamda çalıştırıldı mı?
+  - Uç noktalar erişilebilir mi?
+- [ ] **Veri Doğrulama**
+  - Test için doğru veriler hazırlandı mı?
 
-### **2. Fonksiyonel Kontroller**
-- [ ] Promosyon Alanları:
-  - `promotion.id`, `promotion.shortName` ve `promotion.showAwardItems` doğrulandı.
-- [ ] ShowAwardItems:
-  - `*-589.json` -> **true**.
-  - `*-789.json` -> **false**.
+---
 
-### **3. Otomasyon Testleri**
-- [ ] Test Kapsamı:
-  - Tüm `storeId` ve `promotion` alanları kontrol edildi.
-- [ ] API Otomasyonu:
-  - Yanıt şemaları doğrulandı.
+### **2. API Fonksiyonel Testleri**
+- [ ] **Promotion Alanı Kontrolleri**
+  - `promotion.id` doğrulandı.
+  - `promotion.shortName` değerleri kontrol edildi.
+  - `promotion.showAwardItems` alanı doğrulandı.
+- [ ] **WidgetPromoShortName Uyumluluk Kontrolleri**
+  - Geriye dönük uyumluluk kontrolü yapıldı.
 
-### **4. Performans Testleri**
-- [ ] Yanıt Süreleri:
-  - SLA gereksinimleri karşılandı (< 500 ms).
-- [ ] Yük Testi:
-  - Yük altındaki davranış test edildi.
+---
 
-### **5. Hata Durumları**
-- [ ] Negatif Senaryolar:
-  - Eksik veya hatalı `storeId` ve `promotionId` test edildi.
+### **3. Endpoint Testleri**
+#### **3.1 GrocerySearch Endpoint**
+- [ ] **API Yanıtları**
+  - Endpoint'ten dönen yanıtlar kontrol edildi.
+  - `promotion` ve `showAwardItems` alanları kontrol edildi.
+
+#### **3.2 GroceryCategoryDetail Endpoint**
+- [ ] **Kategori Verileri**
+  - Kategorilerdeki tüm ürünler için `promotion` doğrulandı.
+
+---
+
+### **4. Otomasyon Testleri**
+- [ ] **Otomasyon Test Kapsamı**
+  - Tüm `promotion` alanları test edildi.
+- [ ] **Negatif Senaryolar**
+  - Eksik veya hatalı veri senaryoları test edildi.
+
+---
+
+### **5. Performans Testleri**
+- [ ] **Yanıt Süresi**
+  - SLA altında olduğundan emin olundu.
+- [ ] **Yük Testi**
+  - Çoklu istek durumları test edildi.
+
+---
+
+### **6. Hata Durumları**
+- [ ] **Negatif Senaryolar**
+  - Eksik veya hatalı değerler için doğru hata mesajları kontrol edildi.
