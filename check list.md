@@ -39,16 +39,3 @@
 - [ ] **Negatif Senaryolar**
   - Eksik veya hatalı veri senaryoları test edildi.
 
----
-
-### **5. Performans Testleri**
-- [ ] **Yanıt Süresi**
-  - SLA altında olduğundan emin olundu.
-- [ ] **Yük Testi**
-  - Çoklu istek durumları test edildi.
-
----
-
-### **6. Hata Durumları**
-- [ ] **Negatif Senaryolar**
-  - Eksik veya hatalı değerler için doğru hata mesajları kontrol edildi.
