@@ -1,13 +1,7 @@
 ## **Test Kontrol Listesi**
-## **MR Template**
 
 ### **1. General Information**
 - **Branch Name**: `<Branch Name>` (e.g., `cse-2947`)
-- **Environment**: `<Environment>` (e.g., `Stage`)
-
----
-
-### **2. Data Validation**
 
 | **showAwardItems** | **Data**                                                                                          |
 |---------------------|---------------------------------------------------------------------------------------------------|
@@ -17,15 +11,20 @@
 
 ---
 
-### **3. Sample API Request**
-
+### **2. API Response Pre-Checks**
+- [ ] **Example Curl Validation from the MR**
+  - By making a sample request with **storeId: 284**:
+    - Checked that the response returned 200.
+    - Confirmed that the `promotion` and `showAwardItems` fields are present in the response.
+    - Verified that `promotion.id`, `promotion.shortName`, and `promotion.showAwardItems` have the expected values.
+      
 #### Sample Curl:
 ```bash
-curl --location 'http://<API_ENDPOINT>/search?searchQuery=<QUERY>&searchQueryTypes=PRODUCT&storeIds=<STORE_ID>' \
---header 'x-agentname: <AGENT_NAME>' \
---header 'x-correlationId: <CORRELATION_ID>' \
---header 'branch-name: <BRANCH_NAME>' \
---data ''
+curl --location 'http://discovery-search-grocery-search-service.stage.tgointernals.com/search?searchQuery=tum--urunler%3Fq%3Ds%C3%BCt&searchQueryTypes=PRODUCT&storeIds=284' \
+--header 'x-agentname: agent' \
+--header 'x-correlationId: 123456' \
+--header 'branch-name: cse-2947' \
+--data
 ```
 
 ### **3. API Fonksiyonel Testleri**
