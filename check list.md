@@ -1,35 +1,31 @@
 ## **Test Kontrol Listesi**
+## **MR Template**
 
-### **1. Genel Hazırlık**
-- [ ] **Branch Kontrolü**
-  - Branch adı doğru mu? (**cse-2947** kontrol edildi)
-- [ ] **Ortam Kontrolü**
-  - Testler stage ortamda çalıştırıldı mı? (**Stage** ortamında çalıştırıldı)
-- [ ] **Veri Doğrulama**
-  - Test için doğru datalar hazırlandı mı?
-
-| **showAwardItems** | **Data**                                                                 |
-|---------------------|-----------------------------------------------------------------------------|
-| **false**           | 32432844-789.json, 41008579-789.json, 69649212-789.json, 245087857-789.json, 245087925-789.json |
-| **true**            | 39778655-589.json, 39778838-589.json, 150158831-589.json, 210766127-589.json, 245024354-589.json, 245285503-589.json |
-| **null**            | 39778655-689.json, 39778838-689.json, 39780265-689.json, 150158831-689.json, 210766127-689.json, 245024354-689.json, 245285503-689.json |
+### **1. General Information**
+- **Branch Name**: `<Branch Name>` (e.g., `cse-2947`)
+- **Environment**: `<Environment>` (e.g., `Stage`)
 
 ---
 
-### **2. API Yanıt Ön Kontrolleri**
-- [ ] **MR'da Verilen Örnek Curl Doğrulaması**
-  - **storeId: 284** ile örnek bir istek yapılarak:
-    - Yanıtın 200 döndüğü kontrol edildi.
-    - Yanıtta `promotion` ve `showAwardItems` alanlarının geldiği doğrulandı.
-    - `promotion.id`, `promotion.shortName`, ve `promotion.showAwardItems` alanlarının beklenen değerlere sahip olduğu kontrol edildi.
+### **2. Data Validation**
 
-#### Örnek Curl:
+| **showAwardItems** | **Data**                                                                                          |
+|---------------------|---------------------------------------------------------------------------------------------------|
+| **false**           | `32432844-789.json`, `41008579-789.json`, `69649212-789.json`, `245087857-789.json`, `245087925-789.json` |
+| **true**            | `39778655-589.json`, `39778838-589.json`, `150158831-589.json`, `210766127-589.json`, `245024354-589.json`, `245285503-589.json` |
+| **null**            | `39778655-689.json`, `39778838-689.json`, `39780265-689.json`, `150158831-689.json`, `210766127-689.json`, `245024354-689.json`, `245285503-689.json` |
+
+---
+
+### **3. Sample API Request**
+
+#### Sample Curl:
 ```bash
-curl --location 'http://discovery-search-grocery-search-service.stage.tgointernals.com/search?searchQuery=tum--urunler%3Fq%3Ds%C3%BCt&searchQueryTypes=PRODUCT&storeIds=284' \
---header 'x-agentname: agent' \
---header 'x-correlationId: 123456' \
---header 'branch-name: cse-2947' \
---data
+curl --location 'http://<API_ENDPOINT>/search?searchQuery=<QUERY>&searchQueryTypes=PRODUCT&storeIds=<STORE_ID>' \
+--header 'x-agentname: <AGENT_NAME>' \
+--header 'x-correlationId: <CORRELATION_ID>' \
+--header 'branch-name: <BRANCH_NAME>' \
+--data ''
 ```
 
 ### **3. API Fonksiyonel Testleri**
