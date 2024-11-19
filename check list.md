@@ -30,23 +30,23 @@ curl --location 'http://discovery-search-grocery-search-service.stage.tgointerna
 ### **3. API Fonksiyonel Testleri**
 
 #### **Promotion Alanı Kontrolleri**
-- [ ] **promotion.id** doğrulandı. (Örnek: `65877969`)
-- [ ] **promotion.shortName** değerleri kontrol edildi. (Örnek: `Çok Al Az Öde`)
-- [ ] **promotion.showAwardItems** alanı duruma göre doğrulandı:
+  - **promotion.id** doğrulandı. (Örnek: `65877969`)
+  - **promotion.shortName** değerleri kontrol edildi. (Örnek: `Çok Al Az Öde`)
+  - **promotion.showAwardItems** alanı duruma göre doğrulandı:
   - **showAwardItems: true** -> `*-589.json` dosyaları
   - **showAwardItems: false** -> `*-789.json` dosyaları
   - **showAwardItems: false** -> `*-689.json` dosyaları
 
 #### **WidgetPromoShortName Uyumluluk Kontrolleri**
-- [ ] **widgetPromoShortName** alanı eski ve yeni kod arasında uyumlu kontrol edildi.
+-  **widgetPromoShortName** alanı eski ve yeni kod arasında uyumlu kontrol edildi.
 
 ---
 
 ### **4. Otomasyon Testleri**
 
 #### **Otomasyon Test Kapsamı**
-- [ ] Tüm **promotion** alanları (**id**, **shortName**, **showAwardItems**) test edildi.
-- [ ] **GrocerySearch** ve **GroceryCategoryDetail** endpoint'leri için otomasyon testleri yazıldı.
-- [ ] Otomasyon testlerinde kullanılan:
+      Tüm **promotion** alanları (**id**, **shortName**, **showAwardItems**) test edildi.
+      **GrocerySearch** ve **GroceryCategoryDetail** endpoint'leri için otomasyon testleri yazıldı.
+      Otomasyon testlerinde kullanılan:
   - **showAwardItems**: `true`, `false`, ve `null` durumları kontrol edildi.
   - **promotion.id** ve **promotion.shortName** değerleri karşılaştırıldı.
