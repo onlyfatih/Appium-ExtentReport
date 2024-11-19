@@ -45,8 +45,8 @@ curl --location 'http://discovery-search-grocery-search-service.stage.tgointerna
 ### **4. Otomasyon Testleri**
 
 #### **Otomasyon Test Kapsamı**
-      Tüm **promotion** alanları (**id**, **shortName**, **showAwardItems**) test edildi.
-      **GrocerySearch** ve **GroceryCategoryDetail** endpoint'leri için otomasyon testleri yazıldı.
-      Otomasyon testlerinde kullanılan:
+  - Tüm **promotion** alanları (**id**, **shortName**, **showAwardItems**) test edildi.
+  - **GrocerySearch** ve **GroceryCategoryDetail** endpoint'leri için otomasyon testleri yazıldı.
+  - Otomasyon testlerinde kullanılan:
   - **showAwardItems**: `true`, `false`, ve `null` durumları kontrol edildi.
   - **promotion.id** ve **promotion.shortName** değerleri karşılaştırıldı.
