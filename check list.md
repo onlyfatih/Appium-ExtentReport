@@ -1,4 +1,4 @@
-## **Test Kontrol Listesi**
+## **Test Checklist**
 
 ### **1. General Information**
 - **Branch Name**: `<Branch Name>` (e.g., `cse-2947`)
@@ -27,26 +27,26 @@ curl --location 'http://discovery-search-grocery-search-service.stage.tgointerna
 --data
 ```
 
-### **3. API Fonksiyonel Testleri**
+### **3. API Functional Tests**
 
-#### **Promotion Alanı Kontrolleri**
-  - **promotion.id** doğrulandı. (Örnek: `65877969`)
-  - **promotion.shortName** değerleri kontrol edildi. (Örnek: `Çok Al Az Öde`)
-  - **promotion.showAwardItems** alanı duruma göre doğrulandı:
-  - **showAwardItems: true** -> `*-589.json` dosyaları
-  - **showAwardItems: false** -> `*-789.json` dosyaları
-  - **showAwardItems: false** -> `*-689.json` dosyaları
+#### **Promotion Field Validations**
+- **promotion.id** validated. (Example: `65877969`)
+- **promotion.shortName** values checked. (Example: `Buy More Pay Less`)
+- **promotion.showAwardItems** field validated based on the condition:
+  - **showAwardItems: true** -> `*-589.json` files
+  - **showAwardItems: false** -> `*-789.json` files
+  - **showAwardItems: null** -> `*-689.json` files
 
-#### **WidgetPromoShortName Uyumluluk Kontrolleri**
--  **widgetPromoShortName** alanı eski ve yeni kod arasında uyumlu kontrol edildi.
+#### **WidgetPromoShortName Compatibility Checks**
+- **widgetPromoShortName** field checked for compatibility between the old and new code.
 
 ---
 
-### **4. Otomasyon Testleri**
+### **4. Automation Tests**
 
-#### **Otomasyon Test Kapsamı**
-  - Tüm **promotion** alanları (**id**, **shortName**, **showAwardItems**) test edildi.
-  - **GrocerySearch** ve **GroceryCategoryDetail** endpoint'leri için otomasyon testleri yazıldı.
-  - Otomasyon testlerinde kullanılan:
-  - **showAwardItems**: `true`, `false`, ve `null` durumları kontrol edildi.
-  - **promotion.id** ve **promotion.shortName** değerleri karşılaştırıldı.
+#### **Automation Test Coverage**
+- All **promotion** fields (**id**, **shortName**, **showAwardItems**) were tested.
+- Automation tests were written for **GrocerySearch** and **GroceryCategoryDetail** endpoints.
+- Automation tests covered:
+  - **showAwardItems**: `true`, `false`, and `null` conditions were validated.
+  - **promotion.id** and **promotion.shortName** values were compared.
